@@ -1,4 +1,4 @@
-import { ReactiveOptions, ReactiveSubscriber } from "../types";
+import { ReactiveOptions, ReactiveSubscriber } from "./types";
 
 export const reactive = <T> (
   value: T, 
