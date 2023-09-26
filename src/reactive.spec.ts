@@ -2,9 +2,17 @@ import { reactive } from './reactive';
 import { ReactiveOptions } from './types';
 
 const subscriberMock = jest.fn();
-const middlewareMock = jest.fn((prev: number, newValue: number) => newValue * 2);
+const middlewareMock = jest.fn(
+  (prev: number, newValue: number) => newValue * 2
+);
 
 describe('reactive', () => {
+  it('should create a reactive object with an initial value', () => {
+    const reactiveState = reactive(42);
+    const subscription = reactiveState(subscriberMock);
+
+    expect(subscription.proxy).toEqual({ value: 42 });
+  });
   it('should create a reactive object with an initial value', () => {
     const reactiveState = reactive(42);
     const subscription = reactiveState(subscriberMock);
