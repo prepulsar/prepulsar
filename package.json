@@ -1,14 +1,14 @@
 {
   "name": "prepulsar",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple reactive pubsub library",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
     "build": "tsc"
   },
-  "author": "",
+  "author": "Michael Mammoliti <mammoliti.michael@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.5",
@@ -17,5 +17,16 @@
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prepulsar/prepulsar.git"
+  },
+  "keywords": [
+    "prepulsar"
+  ],
+  "bugs": {
+    "url": "https://github.com/prepulsar/prepulsar/issues"
+  },
+  "homepage": "https://github.com/prepulsar/prepulsar#readme"
 }
