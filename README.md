@@ -57,11 +57,13 @@ A function that takes a `subscriber` function as an argument. This `subscriber` 
 ```javascript
 import { reactive } from 'prepulsar';
 
-const reactiveState = reactive(42);
+const state = reactive(42);
 
-const { proxy, unsubscribe } = reactiveState((newValue) => {
+const subscriber = (newValue) => {
   console.log('Value changed:', newValue);
-});
+};
+
+const { proxy, unsubscribe } = state(subscriber);
 
 // Modify the reactive value
 proxy.value = 99; // This triggers the subscriber
