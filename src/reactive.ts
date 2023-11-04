@@ -14,14 +14,14 @@ export const reactive = <T>(
           return false;
         }
 
-        let prev = target.value as T;
+        const prev = target.value as T;
         let current = newValue;
 
         if (middleware) {
           current = middleware(prev, newValue);
         }
 
-        if (shouldChange && !shouldChange?.(prev, current)) {
+        if (shouldChange && !shouldChange(prev, current)) {
           return true;
         }
 
